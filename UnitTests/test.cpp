@@ -90,7 +90,6 @@ struct account_state {
 	int final_balance;
 	bool success;
 
-
 	friend std::ostream& operator<<(std::ostream& os, const account_state& obj)
 	{
 		return os

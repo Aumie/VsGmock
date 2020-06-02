@@ -156,12 +156,14 @@
     <ClCompile Include="Mathh.cpp" />
     <ClCompile Include="MyClass.cpp" />
     <ClCompile Include="Stack.cpp" />
+    <ClCompile Include="TryMock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BankAccount.h" />
     <ClInclude Include="Mathh.h" />
     <ClInclude Include="MyClass.h" />
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="TryMock.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -40,6 +40,7 @@
     <ClCompile Include="..\GG\Mathh.cpp" />
     <ClCompile Include="..\GG\MyClass.cpp" />
     <ClCompile Include="..\GG\Stack.cpp" />
+    <ClCompile Include="Mock.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
