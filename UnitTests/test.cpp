@@ -7,6 +7,8 @@
 #include "../GG/Mathh.h"
 #include "../GG/MyClass.h"
 #include "../GG/Stack.h"
+#include "../GG/TryMock.h"
+
 
 TEST(TestCaseName, TestName) {
 	auto m = new Mathh();
@@ -115,3 +117,26 @@ INSTANTIATE_TEST_CASE_P(Default, WithdrawAccountTest, testing::Values(
 	account_state{ 100,50,50,true },
 	account_state{ 100,200,100,false }
 ));
+
+
+//mock
+class MockDB : public DataBaseConnect
+{
+public:
+	MOCK_METHOD0(fetchRecord, int());
+	MOCK_METHOD1(logout, bool(std::string usrname));
+	MOCK_METHOD2(login, bool(std::string usrname, std::string pwd));
+};
+
+TEST(MyDBTest, loginTest)
+{
+	//Arrage
+	MockDB mdb;
+	MyDatabase db(mdb);
+	EXPECT_CALL(mdb, login("termi", "lol")).Times(1)
+	.WillOnce(testing::Return(false));
+	//Act
+	int retval = db.init("termi", "lol");
+	//Assert
+	EXPECT_EQ(retval, 1);
+}
