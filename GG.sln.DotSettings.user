@@ -1,19 +1,14 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	
-	
-	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c951416c_002Db73e_002D4ce6_002D9c2c_002Db16d0f89dc26/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Default" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7aa17989_002Dd1e3_002D485e_002Dbcf4_002D52552019d6ea/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestName" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::Default/WithdrawAccountTest.*&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::TestCaseName.TestName&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::ClassTest.Incrementby5&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::BankAccountTest.CanDepositMoney&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::MyclassTest.Incrementby10&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::stackTest.PopTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::stackTest.sizeValidate&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::BankAccountTest.BankAccountStartsEmpty&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::Default/WithdrawAccountTest.FinalBalance/1&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::MyDBTest.loginTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;GTest::68F38C0B-D84F-46A1-9D4D-7BA0E4970F93::.NETFramework,Version=v4.0::MyDBTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::47AB2C17-A44C-4C8A-8113-0B339100A40F::.NETFramework,Version=v4.0::TestCaseName.TestName&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::47AB2C17-A44C-4C8A-8113-0B339100A40F::.NETFramework,Version=v4.0::ClassTest.Incrementby5&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::47AB2C17-A44C-4C8A-8113-0B339100A40F::.NETFramework,Version=v4.0::MyclassTest.Incrementby10&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::47AB2C17-A44C-4C8A-8113-0B339100A40F::.NETFramework,Version=v4.0::stackTest.PopTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::47AB2C17-A44C-4C8A-8113-0B339100A40F::.NETFramework,Version=v4.0::stackTest.sizeValidate&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::47AB2C17-A44C-4C8A-8113-0B339100A40F::.NETFramework,Version=v4.0::BankAccountTest.BankAccountStartsEmpty&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::47AB2C17-A44C-4C8A-8113-0B339100A40F::.NETFramework,Version=v4.0::BankAccountTest.CanDepositMoney&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::47AB2C17-A44C-4C8A-8113-0B339100A40F::.NETFramework,Version=v4.0::Default/WithdrawAccountTest.*&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;GTest::47AB2C17-A44C-4C8A-8113-0B339100A40F::.NETFramework,Version=v4.0::MyDBTest.loginTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

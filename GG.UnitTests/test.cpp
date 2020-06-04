@@ -12,7 +12,7 @@
 
 TEST(TestCaseName, TestName) {
 	auto m = new Mathh();
-	EXPECT_EQ(m->add(1,1), 2);
+	EXPECT_EQ(m->add(1, 1), 2);
 }
 
 
@@ -134,7 +134,7 @@ TEST(MyDBTest, loginTest)
 	MockDB mdb;
 	MyDatabase db(mdb);
 	EXPECT_CALL(mdb, login("termi", "lol")).Times(1)
-	.WillOnce(testing::Return(false));
+		.WillOnce(testing::Return(true));
 	//Act
 	int retval = db.init("termi", "lol");
 	//Assert
