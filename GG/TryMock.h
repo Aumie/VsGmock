@@ -5,6 +5,7 @@ class DataBaseConnect
 {
 public:
 	virtual bool login(std::string usrname, std::string	pwd) { return true; }
+	virtual bool login2(std::string usrname, std::string	pwd) { return true; }
 	virtual bool logout(std::string usrname) { return true; }
 	virtual int fetchRecord() { return -1; }
 };

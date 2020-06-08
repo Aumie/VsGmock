@@ -123,9 +123,13 @@ INSTANTIATE_TEST_CASE_P(Default, WithdrawAccountTest, testing::Values(
 class MockDB : public DataBaseConnect
 {
 public:
-	MOCK_METHOD0(fetchRecord, int());
-	MOCK_METHOD1(logout, bool(std::string usrname));
+	MOCK_METHOD(int, fetchRecord, (), (override)); // new style
+	//MOCK_METHOD0(fetchRecord, int());	// old style
+	//MOCK_METHOD1(logout, bool(std::string usrname));
+	MOCK_METHOD(bool,logout,(std::string usrname));
 	MOCK_METHOD2(login, bool(std::string usrname, std::string pwd));
+	MOCK_METHOD2(login2, bool(std::string usrname, std::string pwd));
+	
 };
 
 TEST(MyDBTest, loginTest)
@@ -133,10 +137,64 @@ TEST(MyDBTest, loginTest)
 	//Arrage
 	MockDB mdb;
 	MyDatabase db(mdb);
-	EXPECT_CALL(mdb, login("termi", "lol")).Times(1)
-		.WillOnce(testing::Return(true));
+	// _ = whatever
+	/*EXPECT_CALL(mdb, login(/*"termi", "lol"#1#testing::_,testing::_)).Times(1)
+		.WillOnce(testing::Return(true));*/
+	ON_CALL(mdb, login(testing::_, testing::_)).WillByDefault(testing::Return(true));
+	ON_CALL(mdb, login2(testing::_, testing::_)).WillByDefault(testing::Return(true));
+	
 	//Act
 	int retval = db.init("termi", "lol");
 	//Assert
 	EXPECT_EQ(retval, 1);
 }
+
+TEST(Fetch,rcord)
+{
+	MockDB mdb;
+	
+	ON_CALL(mdb, fetchRecord()).WillByDefault(testing::Return(1));
+	ON_CALL(mdb, login(testing::_, testing::_)).WillByDefault(testing::Return(true));
+	
+	int val = mdb.fetchRecord();
+
+	EXPECT_EQ(val, 1);
+}
+
+class MockMathh:public Mathh
+{
+	Mathh& _m;
+public:
+	MockMathh(Mathh& mm):_m(mm){}
+	MOCK_METHOD(bool, gtt, (int a, int b), (override));
+	MOCK_METHOD(int, add, (int a, int b), (override));
+	
+}; 
+TEST(Sequence,sq)
+{
+	Mathh m;
+	MockMathh mm(m);
+	
+	ON_CALL(mm, gtt(testing::_,testing::_)).WillByDefault(testing::Return(true));
+
+	EXPECT_CALL(mm, gtt(testing::_, testing::_));
+
+	bool ret = mm.gtt(6, 8);
+	EXPECT_EQ(ret,false);
+	// must fail
+}
+TEST(Sequence,sq2)
+{
+	Mathh m;
+	MockMathh mm(m);
+
+	testing::Sequence s1;
+	EXPECT_CALL(mm, add(testing::_,testing::_)).InSequence(s1);
+	EXPECT_CALL(mm, gtt(testing::_, testing::_)).InSequence(s1);
+
+	mm.gtt(5, 6);
+	mm.add(5, 6);
+	//must fail
+}
+
+
